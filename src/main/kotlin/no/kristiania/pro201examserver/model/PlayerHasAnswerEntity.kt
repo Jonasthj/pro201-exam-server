@@ -1,0 +1,23 @@
+package no.kristiania.pro201examserver.model
+
+import javax.persistence.*
+
+@Entity
+@Table(name = "player_has_answer")
+data class PlayerHasAnswerEntity(
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "player_has_answer_id_seq")
+    @SequenceGenerator(name = "player_has_answer_id_seq", allocationSize = 1)
+    @Column(name = "player_has_answer_id")
+    val id: Long? = null,
+
+    @Column(name = "player_id")
+    val playerId: Long? = null,
+
+    @Column(name = "answer_id")
+    val answerId: Long? = null,
+
+    @Column(name = "is_correct")
+    val isCorrect: Boolean
+)
