@@ -7,10 +7,14 @@ import javax.persistence.*
 data class CorrectAnswersEntity(
 
     @Id
-    @Column(name = "question_id")
-    val questionId: Long? = null,
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "correct_answers_id_seq")
+    @SequenceGenerator(name = "correct_answers_id_seq", allocationSize = 1)
+    @Column(name = "correct_answer_id")
+    val id: Long? = null,
 
-    @Id
+    @Column(name = "question_id")
+    val questionId: Long,
+
     @Column(name = "answer_id")
-    val answerId: Long? = null
+    val answerId: Long
 )
