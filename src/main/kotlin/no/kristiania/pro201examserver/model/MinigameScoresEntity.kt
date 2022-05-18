@@ -3,8 +3,8 @@ package no.kristiania.pro201examserver.model
 import javax.persistence.*
 
 @Entity
-@Table(name = "minigames")
-data class MinigameEntity(
+@Table(name = "minigame_scores")
+data class MinigameScoresEntity(
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "minigames_id_seq")

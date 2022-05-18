@@ -3,7 +3,7 @@ package no.kristiania.pro201examserver.model
 import javax.persistence.*
 
 @Entity
-@Table(name = "player")
+@Table(name = "players")
 data class PlayerEntity(
 
     @Id

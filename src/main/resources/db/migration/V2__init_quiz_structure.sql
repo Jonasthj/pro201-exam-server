@@ -36,37 +36,16 @@ create table correct_answers
             references answers (answer_id)
 );
 
-create table session
-(
-    session_id varchar(20) primary key not null
-);
-
-create table player
-(
-    player_id           bigserial primary key,
-    player_name         varchar(12) not null,
-    player_avatar_index int         not null,
-    player_session_id   varchar(20) not null,
-    constraint session_id
-        foreign key (player_session_id)
-            references session (session_id)
-);
-
 create table player_has_answer
 (
     id         bigserial primary key,
     player_id  bigint  not null,
     answer_id  bigint  not null,
-    is_correct boolean not null
-);
-
-create table minigames
-(
-    minigame_id        bigserial primary key,
-    minigame_amount    int    not null,
-    minigame_time      float  not null,
-    minigame_player_id bigint not null,
-    constraint user_id
-        foreign key (minigame_player_id)
-            references player (player_id)
+    is_correct boolean not null,
+    constraint player_id
+        foreign key (player_id)
+            references players (player_id),
+    constraint answer_id
+        foreign key (answer_id)
+            references answers (answer_id)
 );
