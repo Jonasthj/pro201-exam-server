@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service
 class MinigameScoresService(@Autowired private val minigamesScoresRepo: MinigameScoresRepo) {
 
     fun saveScore(scoresInfo: ScoresInfo): MinigameScoresEntity {
-        val entity = MinigameScoresEntity(amount = scoresInfo.amount, time = scoresInfo.time, playerId = scoresInfo.playerId)
+        val entity = MinigameScoresEntity(amount = scoresInfo.amount, time = scoresInfo.time, playerId = scoresInfo.playerId, minigameId = scoresInfo.minigameId)
         return minigamesScoresRepo.save(entity)
     }
 
 }
 
-data class ScoresInfo(val amount: Int, val time: Float, val playerId: Long)
+data class ScoresInfo(val amount: Int, val time: Float, val playerId: Long, val minigameId: Long)

@@ -7,17 +7,20 @@ import javax.persistence.*
 data class MinigameScoresEntity(
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "minigames_id_seq")
-    @SequenceGenerator(name = "minigames_id_seq", allocationSize = 1)
-    @Column(name = "minigame_id")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "minigame_scores_score_id_seq")
+    @SequenceGenerator(name = "minigame_scores_score_id_seq", allocationSize = 1)
+    @Column(name = "score_id")
     val id: Long? = null,
 
-    @Column(name = "minigame_amount")
+    @Column(name = "score_amount")
     val amount: Int,
 
-    @Column(name = "minigame_time")
+    @Column(name = "score_time")
     val time: Float,
 
-    @Column(name = "minigame_player_id")
-    val playerId: Long? = null
+    @Column(name = "player_id")
+    val playerId: Long,
+
+    @Column(name = "minigame_id")
+    val minigameId: Long
 )

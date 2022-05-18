@@ -7,8 +7,8 @@ import javax.persistence.*
 data class PlayerEntity(
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "player_id_seq")
-    @SequenceGenerator(name = "player_id_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "players_player_id_seq")
+    @SequenceGenerator(name = "players_player_id_seq", allocationSize = 1)
     @Column(name = "player_id")
     val id: Long? = null,
 
