@@ -13,7 +13,7 @@ import java.net.URI
 @RestController
 @RequestMapping("/api")
 class PlayerController(
-    @Autowired private val minigameScoresService: MinigameScoresService,
+    @Autowired private val minigameScoresService: MinigameService,
     @Autowired private val sessionService: SessionService,
     @Autowired private val playerService: PlayerService,
     @Autowired private val quizService: QuizService

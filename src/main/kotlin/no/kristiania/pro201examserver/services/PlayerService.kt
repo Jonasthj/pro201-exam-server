@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service
 class PlayerService(
     @Autowired private val playerRepo: PlayerRepo,
     @Autowired private val sessionService: SessionService,
-    @Autowired private val minigameScoresService: MinigameScoresService
+    @Autowired private val minigameScoresService: MinigameService
 ) {
 
     fun findAllPlayers(sessionId: String): List<PlayerEntity>? {
