@@ -1,9 +1,8 @@
 package no.kristiania.pro201examserver.controller
 
 import no.kristiania.pro201examserver.model.MinigameScoresEntity
-import no.kristiania.pro201examserver.services.MinigameScoresService
-import no.kristiania.pro201examserver.services.ScoresInfo
-import no.kristiania.pro201examserver.services.SessionService
+import no.kristiania.pro201examserver.model.PlayerEntity
+import no.kristiania.pro201examserver.services.*
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -14,7 +13,8 @@ import java.net.URI
 @RequestMapping("/api")
 class PlayerController(
     @Autowired private val minigameScoresService: MinigameScoresService,
-    @Autowired private val sessionService: SessionService
+    @Autowired private val sessionService: SessionService,
+    @Autowired private val playerService: PlayerService
     ) {
 
     @GetMapping("/test")
@@ -25,9 +25,10 @@ class PlayerController(
     @DeleteMapping("/delete/session")
     fun clearSession(@RequestParam sessionId: String): ResponseEntity<String> {
 
-        val response = sessionService.clearSession(sessionId)
+        val playerResponse = playerService.deletePlayers(sessionId)
+        val sessionResponse = sessionService.clearSession(sessionId)
 
-        if(response) {
+        if(sessionResponse && playerResponse) {
             return ResponseEntity.ok().body("Session cleared")
         }
 
@@ -39,6 +40,14 @@ class PlayerController(
         val created = minigameScoresService.saveScore(scoresInfo)
         val uri =
             URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/save/score/minigame").toUriString())
+        return ResponseEntity.created(uri).body(created)
+    }
+
+    @PostMapping("/save/player")
+    fun savePlayer(@RequestBody playerInfo: PlayerInfo) : ResponseEntity<PlayerEntity> {
+        val created = playerService.savePlayer(playerInfo)
+        val uri =
+            URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/save/player").toUriString())
         return ResponseEntity.created(uri).body(created)
     }
 

@@ -13,11 +13,11 @@ data class PlayerEntity(
     val id: Long? = null,
 
     @Column(name = "player_name")
-    val name: String,
+    val name: String? = null,
 
     @Column(name = "player_avatar_index")
-    val avatarIndex: Int,
+    val avatarIndex: Int? = null,
 
     @Column(name = "player_session_id")
-    val sessionId: String
+    val sessionId: String? = null
 )
