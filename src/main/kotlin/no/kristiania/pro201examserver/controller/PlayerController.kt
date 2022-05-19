@@ -56,4 +56,9 @@ class PlayerController(
         return ResponseEntity.created(uri).body(created)
     }
 
+    @GetMapping("/session/players")
+    fun getPlayers(@RequestParam sessionId: String): ResponseEntity<List<PlayerEntity>> {
+        return ResponseEntity.ok().body(playerService.findAllPlayers(sessionId))
+    }
+
 }

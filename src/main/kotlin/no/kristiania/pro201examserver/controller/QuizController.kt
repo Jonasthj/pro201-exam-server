@@ -1,6 +1,5 @@
 package no.kristiania.pro201examserver.controller
 
-import no.kristiania.pro201examserver.model.QuestionsEntity
 import no.kristiania.pro201examserver.model.QuizEntity
 import no.kristiania.pro201examserver.services.QuizService
 import org.springframework.beans.factory.annotation.Autowired

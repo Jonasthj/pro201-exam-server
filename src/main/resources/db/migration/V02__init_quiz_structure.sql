@@ -24,19 +24,6 @@ create table answers
             references questions (question_id)
 );
 
-create table correct_answers
-(
-    correct_answer_id bigserial primary key,
-    question_id       bigint not null,
-    answer_id         bigint not null,
-    constraint question_id
-        foreign key (question_id)
-            references questions (question_id),
-    constraint answer_id
-        foreign key (answer_id)
-            references answers (answer_id)
-);
-
 create table players_has_answers
 (
     id         bigserial primary key,
