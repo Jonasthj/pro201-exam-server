@@ -26,6 +26,12 @@ class MinigameScoresService(@Autowired private val minigamesScoresRepo: Minigame
         return null
     }
 
+    fun deleteScores(id: Long?) {
+        id?.let {
+            println(it)
+            minigamesScoresRepo.deleteAllByPlayerId(it) }
+    }
+
 }
 
 data class ScoresInfo(val id: Long?, val amount: Int?, val time: Float?, val playerId: Long?, val minigameId: Long?)

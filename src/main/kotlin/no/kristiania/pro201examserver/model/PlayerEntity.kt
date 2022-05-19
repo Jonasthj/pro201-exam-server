@@ -19,5 +19,5 @@ data class PlayerEntity(
     val avatarIndex: Int,
 
     @Column(name = "player_session_id")
-    val sessionId: Int
+    val sessionId: String
 )
