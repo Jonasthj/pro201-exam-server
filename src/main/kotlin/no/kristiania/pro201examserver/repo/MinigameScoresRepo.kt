@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository
 
 
 @Repository
-interface MinigameScoresRepo : JpaRepository<MinigameScoresEntity, Long>
+interface MinigameScoresRepo : JpaRepository<MinigameScoresEntity, Long> {
+    fun getByPlayerIdAndMinigameId(playerId: Long, minigameId: Long): MinigameScoresEntity?
+}

@@ -18,12 +18,13 @@ class PlayerController(@Autowired private val minigameScoresService: MinigameSco
         return ResponseEntity.ok().body("Test succeeded")
     }
 
-    @PostMapping("/save/minigame/score")
+    @PostMapping("/save/score/minigame")
     fun saveMinigameScore(@RequestBody scoresInfo: ScoresInfo): ResponseEntity<MinigameScoresEntity> {
         val created = minigameScoresService.saveScore(scoresInfo)
         val uri =
-            URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/save/minigame/score").toUriString())
+            URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/save/score/minigame").toUriString())
         return ResponseEntity.created(uri).body(created)
     }
+
 
 }

@@ -13,14 +13,14 @@ data class MinigameScoresEntity(
     val id: Long? = null,
 
     @Column(name = "score_amount")
-    val amount: Int,
+    val amount: Int? = null,
 
     @Column(name = "score_time")
-    val time: Float,
+    val time: Float? = null,
 
     @Column(name = "player_id")
-    val playerId: Long,
+    val playerId: Long? = null,
 
     @Column(name = "minigame_id")
-    val minigameId: Long
+    val minigameId: Long? = null
 )
