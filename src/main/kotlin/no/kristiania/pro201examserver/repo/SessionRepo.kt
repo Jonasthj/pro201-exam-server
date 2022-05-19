@@ -5,7 +5,4 @@ import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface SessionRepo : JpaRepository<SessionEntity, String> {
-
-    fun getById(id: String?) : SessionEntity?
-}
+interface SessionRepo : JpaRepository<SessionEntity, String>

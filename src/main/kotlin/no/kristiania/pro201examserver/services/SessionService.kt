@@ -16,10 +16,6 @@ class SessionService(
         return true
     }
 
-    fun getSession(sessionId: String?) : SessionEntity? {
-        return sessionRepo.getById(sessionId)
-    }
-
     fun saveSession(session: SessionEntity) : SessionEntity {
         return sessionRepo.save(session)
     }

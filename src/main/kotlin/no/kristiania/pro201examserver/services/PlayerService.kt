@@ -23,15 +23,15 @@ class PlayerService(
 
     fun savePlayer(playerInfo: PlayerInfo): PlayerEntity {
         val player =
-            PlayerEntity(name = playerInfo.name, avatarIndex = playerInfo.avatarIndex, sessionId = playerInfo.sessionId)
+            PlayerEntity(
+                id = playerInfo.id,
+                name = playerInfo.name,
+                avatarIndex = playerInfo.avatarIndex,
+                sessionId = playerInfo.sessionId)
 
         playerInfo.sessionId?.let {
-            println(sessionService.getSession(it).toString())
-
-            /*if (sessionService.getSession(it).) {
-                sessionService.saveSession(SessionEntity(it))
-            }
-*/        }
+            sessionService.saveSession(SessionEntity(it))
+        }
 
         return playerRepo.save(player)
     }
@@ -52,5 +52,5 @@ class PlayerService(
 }
 
 data class PlayerInfo(
-    val name: String? = null, val avatarIndex: Int? = null, val sessionId: String? = null
+    val id: Long?, val name: String?, val avatarIndex: Int?, val sessionId: String?
 )

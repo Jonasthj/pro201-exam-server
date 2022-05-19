@@ -17,11 +17,6 @@ class PlayerController(
     @Autowired private val playerService: PlayerService
     ) {
 
-    @GetMapping("/test")
-    fun getTest() : ResponseEntity<String> {
-        return ResponseEntity.ok().body("Test succeeded")
-    }
-
     @DeleteMapping("/delete/session")
     fun clearSession(@RequestParam sessionId: String): ResponseEntity<String> {
 
