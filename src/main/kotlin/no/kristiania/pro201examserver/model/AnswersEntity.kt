@@ -14,6 +14,9 @@ data class AnswersEntity(
     @Column(name = "answer_name")
     val name: String,
 
+    @Column(name = "answer_is_correct")
+    val isCorrect: Boolean,
+
     @Column(name = "answer_question_id")
     val questionId: Int
 )

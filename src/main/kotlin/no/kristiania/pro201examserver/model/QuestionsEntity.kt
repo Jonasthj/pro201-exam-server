@@ -22,8 +22,4 @@ data class QuestionsEntity(
     @JoinColumn(name = "answer_question_id")
     val answers: List<AnswersEntity>,
 
-    @OneToMany
-    @JoinColumn(name = "question_id")
-    val correctAnswers: List<CorrectAnswersEntity>
-
 )
