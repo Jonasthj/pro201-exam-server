@@ -9,5 +9,9 @@ data class QuizEntity(
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "quiz_quiz_id_seq")
     @SequenceGenerator(name = "quiz_quiz_id_seq", allocationSize = 1)
     @Column(name = "quiz_id")
-    val id: Long? = null
+    val id: Long? = null,
+
+    @OneToMany
+    @JoinColumn(name = "question_quiz_id")
+    val questions: List<QuestionsEntity>
 )

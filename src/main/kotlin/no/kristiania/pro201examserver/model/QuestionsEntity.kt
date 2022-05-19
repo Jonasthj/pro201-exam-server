@@ -16,5 +16,14 @@ data class QuestionsEntity(
     val name: String,
 
     @Column(name = "question_quiz_id")
-    val quizId: Int
+    val quizId: Int,
+
+    @OneToMany
+    @JoinColumn(name = "answer_question_id")
+    val answers: List<AnswersEntity>,
+
+    @OneToMany
+    @JoinColumn(name = "question_id")
+    val correctAnswers: List<CorrectAnswersEntity>
+
 )

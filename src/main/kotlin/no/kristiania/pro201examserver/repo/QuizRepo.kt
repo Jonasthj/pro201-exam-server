@@ -5,4 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface QuizRepo : JpaRepository<QuizEntity, Long>
+interface QuizRepo : JpaRepository<QuizEntity, Long> {
+    fun findQuizEntityById(quizId: Long): QuizEntity?
+}

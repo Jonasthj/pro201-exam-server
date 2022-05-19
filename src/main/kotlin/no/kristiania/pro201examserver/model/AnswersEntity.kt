@@ -5,7 +5,6 @@ import javax.persistence.*
 @Entity
 @Table(name = "answers")
 data class AnswersEntity(
-
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "answers_answer_id_seq")
     @SequenceGenerator(name = "answers_answer_id_seq", allocationSize = 1)

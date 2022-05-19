@@ -36,7 +36,7 @@ create table correct_answers
             references answers (answer_id)
 );
 
-create table player_has_answer
+create table players_has_answers
 (
     id         bigserial primary key,
     player_id  bigint  not null,
