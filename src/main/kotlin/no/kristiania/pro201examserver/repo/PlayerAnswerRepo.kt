@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository
 
 
 @Repository
-interface PlayerAnswerRepo : JpaRepository<PlayerAnswerEntity, Long>
+interface PlayerAnswerRepo : JpaRepository<PlayerAnswerEntity, Long> {
+    fun findPlayerAnswerEntitiesByPlayerId(playerId: Long) : PlayerAnswerEntity?
+}

@@ -1,7 +1,9 @@
 package no.kristiania.pro201examserver.services
 
+import no.kristiania.pro201examserver.model.PlayerAnswerEntity
 import no.kristiania.pro201examserver.model.PlayerEntity
 import no.kristiania.pro201examserver.model.SessionEntity
+import no.kristiania.pro201examserver.repo.PlayerAnswerRepo
 import no.kristiania.pro201examserver.repo.PlayerRepo
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -10,7 +12,8 @@ import org.springframework.stereotype.Service
 class PlayerService(
     @Autowired private val playerRepo: PlayerRepo,
     @Autowired private val sessionService: SessionService,
-    @Autowired private val minigameScoresService: MinigameService
+    @Autowired private val minigameScoresService: MinigameService,
+    @Autowired private val playerAnswerRepo: PlayerAnswerRepo
 ) {
 
     fun findAllPlayers(sessionId: String): List<PlayerEntity>? {
@@ -47,6 +50,23 @@ class PlayerService(
             return true
         }
         return false
+    }
+
+    fun getPlayerAnswers(sessionId: String): List<PlayerAnswerEntity> {
+        val players = findAllPlayers(sessionId)
+        var resultList = listOf<PlayerAnswerEntity>()
+
+        if (players != null && players.isNotEmpty()) {
+            players.forEach{ player ->
+                player.id?.let {
+                    val playerAnswer = playerAnswerRepo.findPlayerAnswerEntitiesByPlayerId(it)
+                    if (playerAnswer != null) {
+                        resultList += playerAnswer
+                    }
+                }
+            }
+        }
+        return resultList
     }
 
 }

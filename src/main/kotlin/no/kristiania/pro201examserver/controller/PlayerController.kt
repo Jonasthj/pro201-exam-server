@@ -61,4 +61,9 @@ class PlayerController(
         return ResponseEntity.ok().body(playerService.findAllPlayers(sessionId))
     }
 
+    @GetMapping("/session/quiz/playerAnswer")
+    fun getPlayerAnswers(@RequestParam sessionId: String) : ResponseEntity<List<PlayerAnswerEntity>>{
+        return ResponseEntity.ok().body(playerService.getPlayerAnswers(sessionId))
+    }
+
 }
