@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository
 
 interface PostInfoRepo: JpaRepository<PostsInfoEntity, Long> {
 
-    fun getPostsInfoEntityById(postInfoId: Long): PostsInfoEntity?
+    fun getByPostId(postId: Long): PostsInfoEntity?
 
 }

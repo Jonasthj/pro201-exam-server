@@ -20,8 +20,8 @@ class PostController(@Autowired private val postService: PostService) {
     }
 
     @GetMapping("/info")
-    fun getPostInfo(@RequestParam postInfoId: Long): ResponseEntity<PostsInfoEntity> {
-        return ResponseEntity.ok().body(postService.getPostInfo(postInfoId))
+    fun getPostInfo(@RequestParam postId: Long): ResponseEntity<PostsInfoEntity> {
+        return ResponseEntity.ok().body(postService.getPostInfo(postId))
     }
 
     @GetMapping("/info/all")
