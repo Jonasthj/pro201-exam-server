@@ -1,4 +1,4 @@
-package no.kristiania.pro201examserver.model
+package no.kristiania.pro201examserver.model.quiz
 
 import javax.persistence.*
 
@@ -22,4 +22,4 @@ data class QuestionsEntity(
     @JoinColumn(name = "answer_question_id")
     val answers: List<AnswersEntity>,
 
-)
+    )

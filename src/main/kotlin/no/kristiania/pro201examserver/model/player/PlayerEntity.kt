@@ -1,5 +1,6 @@
-package no.kristiania.pro201examserver.model
+package no.kristiania.pro201examserver.model.player
 
+import no.kristiania.pro201examserver.model.minigame.MinigameScoresEntity
 import javax.persistence.*
 
 @Entity

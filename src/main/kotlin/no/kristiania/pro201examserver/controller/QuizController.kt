@@ -1,6 +1,6 @@
 package no.kristiania.pro201examserver.controller
 
-import no.kristiania.pro201examserver.model.QuizEntity
+import no.kristiania.pro201examserver.model.quiz.QuizEntity
 import no.kristiania.pro201examserver.services.QuizService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity

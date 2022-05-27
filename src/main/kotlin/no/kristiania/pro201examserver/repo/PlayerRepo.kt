@@ -1,6 +1,6 @@
 package no.kristiania.pro201examserver.repo
 
-import no.kristiania.pro201examserver.model.PlayerEntity
+import no.kristiania.pro201examserver.model.player.PlayerEntity
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 

@@ -1,4 +1,4 @@
-package no.kristiania.pro201examserver.model
+package no.kristiania.pro201examserver.model.player
 
 import javax.persistence.*
 

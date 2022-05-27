@@ -1,8 +1,8 @@
 package no.kristiania.pro201examserver.controller
 
-import no.kristiania.pro201examserver.model.MinigameScoresEntity
-import no.kristiania.pro201examserver.model.PlayerAnswerEntity
-import no.kristiania.pro201examserver.model.PlayerEntity
+import no.kristiania.pro201examserver.model.minigame.MinigameScoresEntity
+import no.kristiania.pro201examserver.model.quiz.PlayerAnswerEntity
+import no.kristiania.pro201examserver.model.player.PlayerEntity
 import no.kristiania.pro201examserver.services.*
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
