@@ -1,6 +1,7 @@
 create table quiz
 (
-    quiz_id bigserial primary key
+    quiz_id bigserial primary key,
+    language_id bigint not null
 );
 
 create table questions

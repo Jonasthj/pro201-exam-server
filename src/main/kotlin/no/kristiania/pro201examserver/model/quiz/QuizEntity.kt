@@ -11,6 +11,9 @@ data class QuizEntity(
     @Column(name = "quiz_id")
     val id: Long? = null,
 
+    @Column(name = "language_id")
+    val languageId: Long,
+
     @OneToMany
     @JoinColumn(name = "question_quiz_id")
     val questions: List<QuestionsEntity>

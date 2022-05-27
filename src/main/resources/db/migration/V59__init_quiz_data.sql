@@ -1,7 +1,7 @@
 insert into quiz
-values (1),
-       (2),
-       (3);
+values (1, 1),
+       (2, 1),
+       (3, 1);
 
 insert into questions
 values (1, 'Hva er 2 + 2?', 1),

@@ -1,5 +1,6 @@
 package no.kristiania.pro201examserver.controller
 
+import no.kristiania.pro201examserver.model.LanguageEntity
 import no.kristiania.pro201examserver.model.minigame.MinigameScoresEntity
 import no.kristiania.pro201examserver.model.quiz.PlayerAnswerEntity
 import no.kristiania.pro201examserver.model.player.PlayerEntity
@@ -65,5 +66,4 @@ class PlayerController(
     fun getPlayerAnswers(@RequestParam sessionId: String) : ResponseEntity<List<PlayerAnswerEntity>>{
         return ResponseEntity.ok().body(playerService.getPlayerAnswers(sessionId))
     }
-
 }
