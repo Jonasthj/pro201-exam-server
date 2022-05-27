@@ -1,7 +1,7 @@
 package no.kristiania.pro201examserver.services
 
 import no.kristiania.pro201examserver.model.player.SessionEntity
-import no.kristiania.pro201examserver.repo.SessionRepo
+import no.kristiania.pro201examserver.repo.player.SessionRepo
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

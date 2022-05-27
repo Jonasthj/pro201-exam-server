@@ -13,3 +13,10 @@ create table players
         foreign key (player_session_id)
             references sessions (session_id)
 );
+
+create table languages
+(
+    language_id bigserial primary key,
+    name        varchar(100) not null,
+    flag_uri    varchar(1000)
+)

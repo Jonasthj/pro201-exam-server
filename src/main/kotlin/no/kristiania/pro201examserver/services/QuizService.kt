@@ -2,8 +2,8 @@ package no.kristiania.pro201examserver.services
 
 import no.kristiania.pro201examserver.model.quiz.PlayerAnswerEntity
 import no.kristiania.pro201examserver.model.quiz.QuizEntity
-import no.kristiania.pro201examserver.repo.PlayerAnswerRepo
-import no.kristiania.pro201examserver.repo.QuizRepo
+import no.kristiania.pro201examserver.repo.quiz.PlayerAnswerRepo
+import no.kristiania.pro201examserver.repo.quiz.QuizRepo
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

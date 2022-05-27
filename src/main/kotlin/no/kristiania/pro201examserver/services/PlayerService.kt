@@ -3,8 +3,8 @@ package no.kristiania.pro201examserver.services
 import no.kristiania.pro201examserver.model.player.PlayerEntity
 import no.kristiania.pro201examserver.model.player.SessionEntity
 import no.kristiania.pro201examserver.model.quiz.PlayerAnswerEntity
-import no.kristiania.pro201examserver.repo.PlayerAnswerRepo
-import no.kristiania.pro201examserver.repo.PlayerRepo
+import no.kristiania.pro201examserver.repo.quiz.PlayerAnswerRepo
+import no.kristiania.pro201examserver.repo.player.PlayerRepo
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

@@ -1,4 +1,4 @@
-package no.kristiania.pro201examserver.repo
+package no.kristiania.pro201examserver.repo.player
 
 import no.kristiania.pro201examserver.model.player.PlayerEntity
 import org.springframework.data.jpa.repository.JpaRepository

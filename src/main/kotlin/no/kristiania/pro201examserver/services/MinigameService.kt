@@ -2,8 +2,8 @@ package no.kristiania.pro201examserver.services
 
 import no.kristiania.pro201examserver.model.minigame.MinigameEntity
 import no.kristiania.pro201examserver.model.minigame.MinigameScoresEntity
-import no.kristiania.pro201examserver.repo.MinigameRepo
-import no.kristiania.pro201examserver.repo.MinigameScoresRepo
+import no.kristiania.pro201examserver.repo.minigame.MinigameRepo
+import no.kristiania.pro201examserver.repo.minigame.MinigameScoresRepo
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

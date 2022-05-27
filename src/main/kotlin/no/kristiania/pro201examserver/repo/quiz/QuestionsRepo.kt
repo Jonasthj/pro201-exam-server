@@ -1,4 +1,4 @@
-package no.kristiania.pro201examserver.repo
+package no.kristiania.pro201examserver.repo.quiz
 
 import no.kristiania.pro201examserver.model.quiz.QuestionsEntity
 import org.springframework.data.jpa.repository.JpaRepository
