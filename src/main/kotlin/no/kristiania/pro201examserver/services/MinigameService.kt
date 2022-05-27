@@ -1,8 +1,10 @@
 package no.kristiania.pro201examserver.services
 
 import no.kristiania.pro201examserver.model.minigame.MinigameEntity
+import no.kristiania.pro201examserver.model.minigame.MinigameRoundsEntity
 import no.kristiania.pro201examserver.model.minigame.MinigameScoresEntity
 import no.kristiania.pro201examserver.repo.minigame.MinigameRepo
+import no.kristiania.pro201examserver.repo.minigame.MinigameRoundsRepo
 import no.kristiania.pro201examserver.repo.minigame.MinigameScoresRepo
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -10,7 +12,8 @@ import org.springframework.stereotype.Service
 @Service
 class MinigameService(
     @Autowired private val minigameRepo: MinigameRepo,
-    @Autowired private val minigamesScoresRepo: MinigameScoresRepo
+    @Autowired private val minigamesScoresRepo: MinigameScoresRepo,
+    @Autowired private val minigameRoundsRepo: MinigameRoundsRepo
     ) {
 
     fun saveScore(scoresInfo: ScoresInfo): MinigameScoresEntity? {
@@ -39,6 +42,10 @@ class MinigameService(
 
     fun getMinigames(): List<MinigameEntity>? {
         return minigameRepo.findAll()
+    }
+
+    fun getMinigameRounds(): List<MinigameRoundsEntity>? {
+        return minigameRoundsRepo.findAll()
     }
 
 }

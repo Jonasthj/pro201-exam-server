@@ -18,5 +18,17 @@ data class MinigameRoundsEntity(
     val languageId: Long,
 
     @Column(name = "post_id")
-    val postId: Long
+    val postId: Long,
+
+    @OneToMany
+    @JoinColumn(name = "round_id")
+    val memoryCards: List<MemoryCardsEntity>? = null,
+
+    @OneToMany
+    @JoinColumn(name = "round_id")
+    val histories: List<HistoriesEntity>? = null,
+
+    @OneToMany
+    @JoinColumn(name = "round_id")
+    val words: List<WordsEntity>? = null
 )

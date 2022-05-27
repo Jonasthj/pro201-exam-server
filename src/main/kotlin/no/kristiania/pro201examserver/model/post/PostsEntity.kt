@@ -18,5 +18,9 @@ data class PostsEntity (
     val quizId: Long,
 
     @Column(name = "language_id")
-    val languageId: Long
+    val languageId: Long,
+
+    @OneToOne
+    @JoinColumn(name = "post_id")
+    val postInfo: PostsInfoEntity? = null
 )
