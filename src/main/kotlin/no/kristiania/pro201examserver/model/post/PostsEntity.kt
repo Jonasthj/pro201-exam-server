@@ -14,6 +14,12 @@ data class PostsEntity (
     @Column(name = "name")
     val name: String,
 
+    @Column(name = "latitude")
+    val latitude: Float,
+
+    @Column(name = "longitude")
+    val longitude: Float,
+
     @Column(name = "quiz_id")
     val quizId: Long,
 

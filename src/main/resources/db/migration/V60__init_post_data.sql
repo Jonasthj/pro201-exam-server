@@ -1,8 +1,8 @@
 insert into posts
-values (1, 'post_01', 1, 1),
-       (2, 'post_01', 1, 2),
-       (3, 'post_02', 2, 1),
-       (4, 'post_02', 2, 2);
+values (1, 'post_01', 0, 0, 1, 1),
+       (2, 'post_01', 0.45, 43.2, 1, 2),
+       (3, 'post_02', 0, 1, 2, 1),
+       (4, 'post_02', 9.2, 43.4, 2, 2);
 
 insert into posts_info_images
 values (1, 'test_1_img_uri'),

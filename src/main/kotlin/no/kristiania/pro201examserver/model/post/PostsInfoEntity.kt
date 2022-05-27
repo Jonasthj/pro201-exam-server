@@ -30,5 +30,9 @@ data class PostsInfoEntity(
     val postId: Long,
 
     @Column(name = "info_img_id")
-    val infoImgId: Long
+    val infoImgId: Long,
+
+    @OneToOne
+    @JoinColumn(name = "info_img_id", insertable = false, updatable = false)
+    val infoImage: PostsInfoImagesEntity? = null
 )

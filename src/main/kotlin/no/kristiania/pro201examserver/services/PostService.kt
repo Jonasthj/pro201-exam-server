@@ -16,10 +16,6 @@ class PostService(
         return postRepo.findAll()
     }
 
-    fun getPostInfo(postId: Long): PostsInfoEntity? {
-        return postInfoRepo.getByPostId(postId)
-    }
-
     fun getPostInfos(): List<PostsInfoEntity>? {
         return postInfoRepo.findAll()
     }
