@@ -23,10 +23,9 @@ create table posts_info_images
 create table posts_info
 (
     info_id       bigserial primary key,
-    intro_txt     varchar(255),
     info_header   varchar(100),
     info_identify int,
-    info_content  varchar(1000),
+    info_content  varchar(3000),
     model_uri     varchar(1000),
     post_id       bigint not null,
     info_img_id   bigint not null,

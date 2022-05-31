@@ -11,9 +11,6 @@ data class PostsInfoEntity(
     @Column(name = "info_id")
     val id: Long? = null,
 
-    @Column(name = "intro_txt")
-    val introTxt: String? = null,
-
     @Column(name = "info_header")
     val infoHeader: String? = null,
 
