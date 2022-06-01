@@ -11,6 +11,9 @@ data class MinigameRoundsEntity(
     @Column(name = "round_id")
     val id: Long? = null,
 
+    @Column(name = "round_number")
+    val roundNumber: Int,
+
     @Column(name = "minigame_id")
     val minigameId: Long,
 

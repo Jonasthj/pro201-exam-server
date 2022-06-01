@@ -8,7 +8,7 @@ import javax.transaction.Transactional
 
 @Repository
 interface MinigameScoresRepo : JpaRepository<MinigameScoresEntity, Long> {
-    fun getByPlayerIdAndMinigameId(playerId: Long, minigameId: Long): MinigameScoresEntity?
+    fun getByPlayerIdAndRoundId(playerId: Long, roundId: Long): MinigameScoresEntity?
 
     @Transactional
     fun deleteAllByPlayerId(playerId: Long)

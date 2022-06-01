@@ -4,17 +4,17 @@ values (1, 'Memo game'),
        (3, 'Word finder'),
        (4, 'History sorter');
 
-insert into minigame_scores
-values (nextval('minigame_scores_score_id_seq'), 4, 34.2, 1, 1),
-       (nextval('minigame_scores_score_id_seq'), 2, 15, 2, 1),
-       (nextval('minigame_scores_score_id_seq'), 1, 45, 3, 2),
-       (nextval('minigame_scores_score_id_seq'), 6, 10, 2, 2),
-       (nextval('minigame_scores_score_id_seq'), 10, 50.3, 2, 3);
-
 insert into minigame_rounds
-values (1, 1, 1, 1),
-       (2, 3, 1, 2),
-       (3, 4, 1, 1);
+values (1, 1, 1, 1, 1),
+       (2, 2, 1, 1, 1),
+       (3, 3, 1, 1, 1);
+
+insert into minigame_scores
+values (nextval('minigame_scores_score_id_seq'), 2, 34.2, 1, 1),
+       (nextval('minigame_scores_score_id_seq'), 2, 15, 2, 1),
+       (nextval('minigame_scores_score_id_seq'), 1, 45, 3, 1),
+       (nextval('minigame_scores_score_id_seq'), 6, 10, 2, 1),
+       (nextval('minigame_scores_score_id_seq'), 10, 50.3, 2, 1);
 
 insert into memorycards
 values (nextval('memorycards_memory_id_seq'), 'memory_card_1_uri', 1),

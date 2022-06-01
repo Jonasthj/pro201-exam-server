@@ -18,15 +18,15 @@ class MinigameService(
 
     fun saveScore(scoresInfo: ScoresInfo): MinigameScoresEntity? {
 
-        if(scoresInfo.playerId != null && scoresInfo.minigameId != null) {
-            val playerScore = minigamesScoresRepo.getByPlayerIdAndMinigameId(scoresInfo.playerId, scoresInfo.minigameId)
+        if(scoresInfo.playerId != null && scoresInfo.roundId != null) {
+            val playerScore = minigamesScoresRepo.getByPlayerIdAndRoundId(scoresInfo.playerId, scoresInfo.roundId)
 
             val entity = MinigameScoresEntity(
                 id = playerScore?.id,
                 amount = scoresInfo.amount ?: playerScore?.amount,
                 time = scoresInfo.time ?: playerScore?.time,
                 playerId = scoresInfo.playerId,
-                minigameId = scoresInfo.minigameId)
+                roundId = scoresInfo.roundId)
 
             return minigamesScoresRepo.save(entity)
         }
@@ -50,4 +50,4 @@ class MinigameService(
 
 }
 
-data class ScoresInfo(val id: Long?, val amount: Int?, val time: Float?, val playerId: Long?, val minigameId: Long?)
+data class ScoresInfo(val id: Long?, val amount: Int?, val time: Float?, val playerId: Long?, val roundId: Long?)

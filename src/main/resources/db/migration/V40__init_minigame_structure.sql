@@ -4,24 +4,10 @@ create table minigames
     name        varchar(100) not null
 );
 
-create table minigame_scores
-(
-    score_id     bigserial primary key,
-    score_amount int    not null,
-    score_time   float  not null,
-    player_id    bigint not null,
-    minigame_id  bigint not null,
-    constraint player_id
-        foreign key (player_id)
-            references players (player_id),
-    constraint minigame_id
-        foreign key (minigame_id)
-            references minigames (minigame_id)
-);
-
 create table minigame_rounds
 (
     round_id    bigserial primary key,
+    round_number int not null,
     minigame_id bigint not null,
     language_id bigint not null,
     post_id     bigint not null,
@@ -34,6 +20,21 @@ create table minigame_rounds
     constraint post_id
         foreign key (post_id)
             references posts (post_id)
+);
+
+create table minigame_scores
+(
+    score_id     bigserial primary key,
+    score_amount int    not null,
+    score_time   float  not null,
+    player_id    bigint not null,
+    round_id  bigint not null,
+    constraint player_id
+        foreign key (player_id)
+            references players (player_id),
+    constraint round_id
+        foreign key (round_id)
+            references minigame_rounds (round_id)
 );
 
 create table memorycards
