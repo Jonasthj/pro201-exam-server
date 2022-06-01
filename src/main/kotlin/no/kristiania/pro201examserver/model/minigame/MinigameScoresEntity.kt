@@ -23,8 +23,8 @@ data class MinigameScoresEntity(
     @Column(name = "round_id")
     val roundId: Long? = null,
 
-    @OneToMany
-    @JoinColumn(name = "round_id")
-    val minigameRounds: List<MinigameRoundsEntity>? = null,
+    @OneToOne
+    @JoinColumn(name = "round_id", insertable = false, updatable = false)
+    val minigameRound: MinigameRoundsEntity? = null,
 
 )
