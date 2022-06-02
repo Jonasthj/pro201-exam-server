@@ -1,5 +1,6 @@
 package no.kristiania.pro201examserver.model.minigame
 
+import no.kristiania.pro201examserver.model.post.PostsEntity
 import javax.persistence.*
 
 @Entity
@@ -22,6 +23,10 @@ data class MinigameRoundsEntity(
 
     @Column(name = "post_id")
     val postId: Long,
+
+    @OneToOne
+    @JoinColumn(name = "post_id", updatable = false, insertable = false)
+    val post: PostsEntity? = null,
 
     @OneToMany
     @JoinColumn(name = "round_id")

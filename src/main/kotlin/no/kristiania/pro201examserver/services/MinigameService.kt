@@ -48,6 +48,10 @@ class MinigameService(
         return minigameRoundsRepo.findAll()
     }
 
+    fun getMinigameRound(roundId: Long): MinigameRoundsEntity? {
+        return minigameRoundsRepo.getById(roundId);
+    }
+
 }
 
 data class ScoresInfo(val id: Long?, val amount: Int?, val time: Float?, val playerId: Long?, val roundId: Long?)
