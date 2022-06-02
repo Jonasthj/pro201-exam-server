@@ -54,12 +54,12 @@ class PlayerService(
 
     fun getPlayerAnswers(sessionId: String): List<PlayerAnswerEntity> {
         val players = findAllPlayers(sessionId)
-        var resultList = listOf<PlayerAnswerEntity>()
+        val resultList = mutableListOf<PlayerAnswerEntity>()
 
         if (players != null && players.isNotEmpty()) {
             players.forEach{ player ->
                 player.id?.let {
-                    val playerAnswer = playerAnswerRepo.findPlayerAnswerEntitiesByPlayerId(it)
+                    val playerAnswer = playerAnswerRepo.findAllByPlayerId(it)
                     if (playerAnswer != null) {
                         resultList += playerAnswer
                     }
