@@ -8,6 +8,7 @@ import no.kristiania.pro201examserver.repo.minigame.MinigameRoundsRepo
 import no.kristiania.pro201examserver.repo.minigame.MinigameScoresRepo
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
+import java.time.LocalDateTime
 
 @Service
 class MinigameService(
@@ -54,4 +55,4 @@ class MinigameService(
 
 }
 
-data class ScoresInfo(val id: Long?, val amount: Int?, val time: Float?, val playerId: Long?, val roundId: Long?)
+data class ScoresInfo(val id: Long?, val amount: Int?, val time: Float?, val created: LocalDateTime?, val playerId: Long?, val roundId: Long?)

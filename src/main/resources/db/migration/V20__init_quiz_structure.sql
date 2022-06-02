@@ -31,6 +31,7 @@ create table players_has_answers
     player_id  bigint  not null,
     answer_id  bigint  not null,
     is_correct boolean not null,
+    created timestamp,
     constraint player_id
         foreign key (player_id)
             references players (player_id),

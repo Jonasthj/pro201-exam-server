@@ -27,6 +27,7 @@ create table minigame_scores
     score_id     bigserial primary key,
     score_amount int    not null,
     score_time   float  not null,
+    created timestamp,
     player_id    bigint not null,
     round_id  bigint not null,
     constraint player_id

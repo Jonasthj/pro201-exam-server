@@ -1,5 +1,6 @@
 package no.kristiania.pro201examserver.model.quiz
 
+import java.time.LocalDateTime
 import javax.persistence.*
 
 @Entity
@@ -18,5 +19,8 @@ data class PlayerAnswerEntity(
     val answerId: Long? = null,
 
     @Column(name = "is_correct")
-    val isCorrect: Boolean? = null
+    val isCorrect: Boolean? = null,
+
+    @Column(name = "created")
+    val created: LocalDateTime? = LocalDateTime.now()
 )

@@ -1,5 +1,6 @@
 package no.kristiania.pro201examserver.model.minigame
 
+import java.time.LocalDateTime
 import javax.persistence.*
 
 @Entity
@@ -17,6 +18,9 @@ data class MinigameScoresEntity(
     @Column(name = "score_time")
     val time: Float? = null,
 
+    @Column(name = "created")
+    val created: LocalDateTime? = LocalDateTime.now(),
+
     @Column(name = "player_id")
     val playerId: Long? = null,
 
@@ -27,4 +31,4 @@ data class MinigameScoresEntity(
     @JoinColumn(name = "round_id", insertable = false, updatable = false)
     val minigameRound: MinigameRoundsEntity? = null,
 
-)
+    )
