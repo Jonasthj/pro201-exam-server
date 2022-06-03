@@ -18,7 +18,8 @@ class QuizService(
             answerInfo.id,
             answerInfo.playerId,
             answerInfo.answerId,
-            answerInfo.isCorrect
+            answerInfo.isCorrect,
+            answerInfo.timeElapsed
         )
         return playerAnswerRepo.save(playerAnswerEntity)
     }
