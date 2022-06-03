@@ -41,6 +41,7 @@ class PlayerController(
         return ResponseEntity.created(uri).body(created)
     }
 
+    @CrossOrigin
     @PostMapping("/save/player")
     fun savePlayer(@RequestBody playerInfo: PlayerInfo) : ResponseEntity<PlayerEntity> {
         val created = playerService.savePlayer(playerInfo)
