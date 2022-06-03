@@ -30,5 +30,5 @@ class QuizService(
 }
 
 data class  AnswerInfo(
-    val id: Long?, val playerId: Long?, val answerId: Long?, val isCorrect: Boolean?
+    val id: Long?, val playerId: Long?, val answerId: Long?, val isCorrect: Boolean?, val timeElapsed: Float?
 )
