@@ -1,6 +1,6 @@
 create table quiz
 (
-    quiz_id bigserial primary key,
+    quiz_id     bigserial primary key,
     language_id bigint not null
 );
 
@@ -27,11 +27,12 @@ create table answers
 
 create table players_has_answers
 (
-    id         bigserial primary key,
-    player_id  bigint  not null,
-    answer_id  bigint  not null,
-    is_correct boolean not null,
-    created timestamp,
+    id           bigserial primary key,
+    player_id    bigint  not null,
+    answer_id    bigint  not null,
+    is_correct   boolean not null,
+    time_elapsed float   not null,
+    created      timestamp,
     constraint player_id
         foreign key (player_id)
             references players (player_id),
