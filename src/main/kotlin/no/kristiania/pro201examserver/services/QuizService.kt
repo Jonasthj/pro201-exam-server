@@ -29,6 +29,6 @@ class QuizService(
 
 }
 
-data class AnswerInfo(
+data class  AnswerInfo(
     val id: Long?, val playerId: Long?, val answerId: Long?, val isCorrect: Boolean?
 )
