@@ -4,5 +4,5 @@ import no.kristiania.pro201examserver.model.minigame.MinigameRoundsEntity
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface MinigameRoundsRepo: JpaRepository<MinigameRoundsEntity, Long> {
-    fun getAllByMinigameId(minigameId: Long): List<MinigameRoundsEntity>?
+    fun getAllByPostId(postId: Long): List<MinigameRoundsEntity>?
 }

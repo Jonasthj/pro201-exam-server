@@ -8,9 +8,9 @@ insert into minigame_rounds
 values (1, 1, 1, 1, 1),
        (2, 2, 1, 1, 1),
        (3, 3, 1, 1, 1),
-       (4, 1, 2, 1, 2),
-       (5, 2, 2, 1, 2),
-       (6, 3, 2, 1, 2);
+       (4, 1, 1, 1, 2),
+       (5, 2, 1, 1, 2),
+       (6, 3, 1, 1, 2);
 
 insert into minigame_scores
 values (nextval('minigame_scores_score_id_seq'), 2, 34.2, now(), 1, 1),

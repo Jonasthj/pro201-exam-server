@@ -32,8 +32,8 @@ class MinigameController(
     }
 
     @GetMapping("/round/game")
-    fun getRoundsByMinigame(@RequestParam minigameId: Long): ResponseEntity<List<MinigameRoundsEntity>> {
-        return ResponseEntity.ok().body(minigameService.getRoundsByMinigame(minigameId))
+    fun getRoundsByMinigame(@RequestParam postId: Long): ResponseEntity<List<MinigameRoundsEntity>> {
+        return ResponseEntity.ok().body(minigameService.getRoundsByMinigame(postId))
     }
 
 }
