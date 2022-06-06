@@ -53,6 +53,10 @@ class MinigameService(
         return minigameRoundsRepo.getById(roundId);
     }
 
+    fun getRoundsByMinigame(minigameId: Long): List<MinigameRoundsEntity>? {
+        return minigameRoundsRepo.getAllByMinigameId(minigameId)
+    }
+
 }
 
 data class ScoresInfo(val id: Long?, val amount: Int?, val time: Float?, val created: LocalDateTime?, val playerId: Long?, val roundId: Long?)
