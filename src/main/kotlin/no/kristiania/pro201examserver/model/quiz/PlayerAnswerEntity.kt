@@ -21,6 +21,9 @@ data class PlayerAnswerEntity(
     @Column(name = "is_correct")
     val isCorrect: Boolean? = null,
 
+    @Column(name = "time_elapsed")
+    val timeElapsed: Float? = null,
+
     @Column(name = "created")
     val created: LocalDateTime? = LocalDateTime.now()
 )

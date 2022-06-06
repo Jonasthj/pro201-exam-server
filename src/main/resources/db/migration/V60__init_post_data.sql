@@ -1,8 +1,8 @@
 insert into posts
-values (1, 'Vegfar/hulveg', 11.10087238, 59.85371299, 1, 1),
-       (2, 'Kvernhus/mølle', 11.10114478, 59.85148464, 2, 1),
+values (1, 'Hulveg', 11.10087238, 59.85371299, 1, 1),
+       (2, 'Kvernhus', 11.10114478, 59.85148464, 2, 1),
        (3, 'Sagtuft', 11.11492068, 59.85452141, 3, 1),
-       (4, 'Mølle/Kvernhus', 11.10057089, 59.85290827, 4, 1),
+       (4, 'Mølle', 11.10057089, 59.85290827, 4, 1),
        (5, 'Sagtuft', 11.10203063, 59.85396, 5, 1),
        (6, 'Sagtuft', 11.10772289, 59.85438232, 6, 1),
        (7, 'Sagtuft', 11.11190333, 59.85439546, 7, 1);
@@ -17,11 +17,11 @@ values (1, 'test_1_img_uri'),
        (7, 'test_7_img_uri');
 
 insert into posts_info
-values (1, 'Vegfar/hulveg', 267498,
+values (1, 'Hulveg', 267498,
         'En tydelig hulveg som ligger i en skråning ned mot Byåa, retning på hulveien er NV-SØ. Målene på hulvegen er 1,30 meter i bunn og 4 meter bred i toppen. Dybden på vegen er 1,15 meter. Ligger i åpent gressbevokst terreng med utsikt mot Øyeren i øst.',
         'sagruin_uri', 1, 1),
 
-       (2, 'Kvernhus/mølle', 267603,
+       (2, 'Kvernhus', 267603,
         'Fra Vesledammen går Byåa ned i en bratt skråning, men der terrenget flater seg litt mer ut, er det spor av et kvernhus. Denne ligger vest for grusvei/skogsvei. Langs sidene på Byåa er det murt opp stein på begge sider, på sørsiden er den 1,4 meter lang, mer utydelig på nordsiden, men det ligger en stor steinblokk på 50 x 50 cm på kanten. Det er også stein på kantene som ser ut som fundament til en liten bygning, mest på sørsiden. Det ser ut som selve bygningen kan ha ligget på sørsiden, det er i vest en steinvoll på 40 cm høyde, lengde 110 cm og bredde 80 cm. Det går på skrå ut fra steinvollen en lav steinstreng på 2 meter og bredde 80 cm. I øst er steinansamlingen 40 cm høy, 2-3 meter bred og 4 meter lang. Steinansamlingene viser ikke tydelig omfanget av, eller hvordan kvernhuset kan ha sett ut, men sannsynlig kan selve vannhjulet ligget i selve Byåa. Det ligger en liten demning rett vest for kvernhuset/mølla, men er av nyere dato eller eventuelt restaurert da den er lagd av godt bevart planker. Området rundt er en liten flate med bratte skråninger i sør.
 Historiske kart fra 1800-taller viser at det har ligget flere kvernhus/møller i området og de er også nevnt i skriftlige kilder. Det er tatt vare på flere kvernsteiner/møllesteiner som ligger i private hager i nærområdet.',
         'vannmølle_uri', 2, 2),
@@ -31,7 +31,7 @@ Historiske kart fra 1800-taller viser at det har ligget flere kvernhus/møller i
 2019: Kartfestingen er endret på og flere enkeltminner som kan knyttes til sagdriften er lagt til. I tillegg kan det se ut som det har vært en lagringsflate for plank rett nord for saga. Denne er ikke målt inn eller beskrevet da den ikke er veldig tydelig. Rett ovenfor sagmurene er det også rester etter et damanlegg som ikke er nærmere beskrevet. Lokalitet 22184 er innlemmet i lokaliteten. Gamle flyfoto fra blant annet 1955 viser at store mengder sagtømmer ligger stablet langs stranden i dette området.',
         'sagruin_uri', 3, 3),
 
-       (4, 'Mølle/Kvernhus', 267472,
+       (4, 'Mølle', 267472,
         'Lokaliteten ligger ved Byåa, vest for Nedre Rælingsvei. Sporene etter vannsagen eller eventuelt et kvernhus som har stått i nærheten er i dag borte, sannsynlig på grunn av anleggelse av veier som Ulleråsen og Nedre Rælingsvei. Byåa krysser der disse veiene møtes. Historiske kart fra 1800-tallet viser at det har ligget flere sager og kvernhus/møller langs hele Byåa, også i området hvor lokaliteten ligger. På lokalitet med id. 12322 ligger beskrivelse av lokaliteten (registrert 1977): Ca 100m S for kryss Byåa og hovedveien: Rester av mølle? Sees i form av trekonstruksjoner, hvorav det meste er rasert. Ca 10 m S for og ovenfor trekonstruksjonen og på V-bredden: Tørrmur, l 20m. 5m ovenfor dennes slutt finnes en sementert demning, parallelt og på hver side av bekken, orientert N-S.',
         'sagruin_uri', 4, 4),
 

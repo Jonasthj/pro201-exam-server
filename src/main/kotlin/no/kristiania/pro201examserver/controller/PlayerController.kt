@@ -20,6 +20,7 @@ class PlayerController(
     @Autowired private val quizService: QuizService
     ) {
 
+    @CrossOrigin
     @DeleteMapping("/delete/session")
     fun clearSession(@RequestParam sessionId: String): ResponseEntity<String> {
 
@@ -33,6 +34,7 @@ class PlayerController(
         return ResponseEntity.badRequest().build()
     }
 
+    @CrossOrigin
     @PostMapping("/save/score/minigame")
     fun saveMinigameScore(@RequestBody scoresInfo: ScoresInfo): ResponseEntity<MinigameScoresEntity> {
         val created = minigameScoresService.saveScore(scoresInfo)
@@ -41,6 +43,7 @@ class PlayerController(
         return ResponseEntity.created(uri).body(created)
     }
 
+    @CrossOrigin
     @PostMapping("/save/player")
     fun savePlayer(@RequestBody playerInfo: PlayerInfo) : ResponseEntity<PlayerEntity> {
         val created = playerService.savePlayer(playerInfo)
@@ -49,6 +52,7 @@ class PlayerController(
         return ResponseEntity.created(uri).body(created)
     }
 
+    @CrossOrigin
     @PostMapping("/save/player/answer")
     fun savePlayerAnswer(@RequestBody answerInfo: AnswerInfo): ResponseEntity<PlayerAnswerEntity> {
         val created = quizService.savePlayerAnswer(answerInfo)
@@ -57,16 +61,19 @@ class PlayerController(
         return ResponseEntity.created(uri).body(created)
     }
 
+    @CrossOrigin
     @GetMapping("/session/players")
     fun getPlayers(@RequestParam sessionId: String): ResponseEntity<List<PlayerEntity>> {
         return ResponseEntity.ok().body(playerService.findAllPlayers(sessionId))
     }
 
+    @CrossOrigin
     @GetMapping("/player")
     fun getPlayer(@RequestParam playerId: Long): ResponseEntity<PlayerEntity> {
         return ResponseEntity.ok().body(playerService.getPlayer(playerId))
     }
 
+    @CrossOrigin
     @GetMapping("/session/quiz/playerAnswer")
     fun getPlayerAnswers(@RequestParam sessionId: String) : ResponseEntity<List<PlayerAnswerEntity>>{
         return ResponseEntity.ok().body(playerService.getPlayerAnswers(sessionId))

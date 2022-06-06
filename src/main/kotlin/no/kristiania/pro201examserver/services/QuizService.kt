@@ -18,7 +18,8 @@ class QuizService(
             answerInfo.id,
             answerInfo.playerId,
             answerInfo.answerId,
-            answerInfo.isCorrect
+            answerInfo.isCorrect,
+            answerInfo.timeElapsed
         )
         return playerAnswerRepo.save(playerAnswerEntity)
     }
@@ -29,6 +30,6 @@ class QuizService(
 
 }
 
-data class AnswerInfo(
-    val id: Long?, val playerId: Long?, val answerId: Long?, val isCorrect: Boolean?
+data class  AnswerInfo(
+    val id: Long?, val playerId: Long?, val answerId: Long?, val isCorrect: Boolean?, val timeElapsed: Float?
 )
