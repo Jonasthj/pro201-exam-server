@@ -20,7 +20,7 @@ values (1, 'Hvor kan man finne andre hulveier?', 1),
        (8, 'Hva betyr tuft?', 3),
        (9, 'Til øst for ruinen ligger det stokker under vann, hvorfor er disse her?', 3),
 
-       (10, 'Her er alle spor etter det som var her forsvunnet. Klarer dere å gjette hva som lå her?', 4),
+       (10, 'Hvilken funksjon har vann i en vannsag?', 4),
        (11, 'Hva heter bekken / elven som er rett ved deg?', 4),
        (12, 'Hvilken tidsperiode er ruinene fra?', 4),
 
@@ -82,10 +82,10 @@ values (1, 'Hulveier er svært sjeldent, og det finnes kun to i Europa', false, 
        (35, 'Rester etter en gammel bro', false, 9),
        (36, 'Rester etter en gammel demning', false, 9),
 
-       (37, 'Vannsag', true, 10),
-       (38, 'Kvernhus', false, 10),
-       (39, 'Mølle', false, 10),
-       (40, 'Bolig', false, 10),
+       (37, 'Drift av sag og frakt av treverk', true, 10),
+       (38, 'Nedkjøling', false, 10),
+       (39, 'Hestene kan drikke av vannet', false, 10),
+       (40, 'Lett ankomst med båt', false, 10),
 
        (41, 'Kurlandsbekken', false, 11),
        (42, 'Gjellebekken', false, 11),
