@@ -8,13 +8,13 @@ values (1, 'Hulveg', 11.10087238, 59.85371299, 1, 1),
        (7, 'Sagtuft', 11.11190333, 59.85439546, 7, 1);
 
 insert into posts_info_images
-values (1, 'test_1_img_uri'),
-       (2, 'test_2_img_uri'),
-       (3, 'test_3_img_uri'),
-       (4, 'test_4_img_uri'),
-       (5, 'test_5_img_uri'),
-       (6, 'test_6_img_uri'),
-       (7, 'test_7_img_uri');
+values (1, 'Images/PostPopup/267498'),
+       (2, 'Images/PostPopup/267603'),
+       (3, 'Images/PostPopup/22183'),
+       (4, 'Images/PostPopup/267472'),
+       (5, 'Images/PostPopup/12322'),
+       (6, 'Images/PostPopup/267607'),
+       (7, 'Images/PostPopup/80278');
 
 insert into posts_info
 values (1, 'Hulveg', 267498,
