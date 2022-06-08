@@ -19,7 +19,7 @@ data class PlayerAnswerEntity(
     val answerId: Long? = null,
 
     @Column(name = "question_id")
-    val questionid: Long? = null,
+    val questionId: Long? = null,
 
     @Column(name = "is_correct")
     val isCorrect: Boolean? = null,

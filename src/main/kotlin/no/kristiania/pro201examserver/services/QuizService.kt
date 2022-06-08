@@ -21,6 +21,7 @@ class QuizService(
                 id = playerAnswer?.id,
                 playerId = answerInfo.playerId,
                 answerId = answerInfo.answerId,
+                questionId = answerInfo.questionId ?: playerAnswer?.questionId,
                 isCorrect = answerInfo.isCorrect ?: playerAnswer?.isCorrect,
                 timeElapsed = answerInfo.timeElapsed ?: playerAnswer?.timeElapsed,
             )
@@ -40,6 +41,6 @@ class QuizService(
 
 }
 
-data class  AnswerInfo(
-    val id: Long?, val playerId: Long?, val answerId: Long?, val questionId: Long?,val isCorrect: Boolean?, val timeElapsed: Float?
+data class AnswerInfo(
+    val id: Long?, val playerId: Long?, val answerId: Long?, val questionId: Long?, val isCorrect: Boolean?, val timeElapsed: Float?
 )
