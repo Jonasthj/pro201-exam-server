@@ -122,5 +122,4 @@ class PlayerServiceUnitTests {
         assert(didDelete)
         assertFalse(!didDelete)
     }
-
 }

@@ -1,6 +1,5 @@
 package no.kristiania.pro201examserver.controller
 
-import no.kristiania.pro201examserver.model.LanguageEntity
 import no.kristiania.pro201examserver.model.minigame.MinigameScoresEntity
 import no.kristiania.pro201examserver.model.quiz.PlayerAnswerEntity
 import no.kristiania.pro201examserver.model.player.PlayerEntity
@@ -14,7 +13,7 @@ import java.net.URI
 @RestController
 @RequestMapping("/api")
 class PlayerController(
-    @Autowired private val minigameScoresService: MinigameService,
+    @Autowired private val minigameService: MinigameService,
     @Autowired private val sessionService: SessionService,
     @Autowired private val playerService: PlayerService,
     @Autowired private val quizService: QuizService
@@ -37,7 +36,7 @@ class PlayerController(
     @CrossOrigin
     @PostMapping("/save/score/minigame")
     fun saveMinigameScore(@RequestBody scoresInfo: ScoresInfo): ResponseEntity<MinigameScoresEntity> {
-        val created = minigameScoresService.saveScore(scoresInfo)
+        val created = minigameService.saveScore(scoresInfo)
         val uri =
             URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/save/score/minigame").toUriString())
         return ResponseEntity.created(uri).body(created)
