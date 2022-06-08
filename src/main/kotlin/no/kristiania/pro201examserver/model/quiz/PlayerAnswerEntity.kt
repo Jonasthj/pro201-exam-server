@@ -29,5 +29,5 @@ data class PlayerAnswerEntity(
 
     @OneToOne
     @JoinColumn(name = "answer_id", insertable = false, updatable = false)
-    val answer: AnswersEntity? = null
+    val question: QuestionsEntity? = null
 )

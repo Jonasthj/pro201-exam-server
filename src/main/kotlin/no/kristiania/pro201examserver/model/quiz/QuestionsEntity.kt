@@ -19,7 +19,7 @@ data class QuestionsEntity(
     val quizId: Int,
 
     @OneToMany
-    @JoinColumn(name = "answer_question_id")
+    @JoinColumn(name = "question_id")
     val answers: List<AnswersEntity>,
 
     )

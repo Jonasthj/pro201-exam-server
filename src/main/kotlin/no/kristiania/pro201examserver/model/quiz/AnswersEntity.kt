@@ -19,8 +19,4 @@ data class AnswersEntity(
 
     @Column(name = "question_id")
     val questionId: Int,
-
-    @OneToOne
-    @JoinColumn(name = "question_id", insertable = false, updatable = false)
-    val question: QuestionsEntity? = null
 )
