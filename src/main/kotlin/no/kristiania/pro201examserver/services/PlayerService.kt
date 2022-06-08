@@ -73,6 +73,10 @@ class PlayerService(
         return playerRepo.getById(playerId)
     }
 
+    fun getPlayerAnswersByPlayer(playerId: Long): List<PlayerAnswerEntity>? {
+        return playerAnswerRepo.findAllByPlayerId(playerId)
+    }
+
 }
 
 data class PlayerInfo(

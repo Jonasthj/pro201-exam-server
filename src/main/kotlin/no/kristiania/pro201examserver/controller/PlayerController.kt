@@ -78,4 +78,10 @@ class PlayerController(
     fun getPlayerAnswers(@RequestParam sessionId: String) : ResponseEntity<List<PlayerAnswerEntity>>{
         return ResponseEntity.ok().body(playerService.getPlayerAnswers(sessionId))
     }
+
+    @CrossOrigin
+    @GetMapping("/quiz/playerAnswer")
+    fun getPlayerAnswers(@RequestParam playerId: Long) : ResponseEntity<List<PlayerAnswerEntity>>{
+        return ResponseEntity.ok().body(playerService.getPlayerAnswersByPlayer(playerId))
+    }
 }

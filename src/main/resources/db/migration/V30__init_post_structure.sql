@@ -2,6 +2,7 @@ create table posts
 (
     post_id     bigserial primary key,
     name        varchar(100) not null,
+
     latitude    float        not null,
     longitude   float        not null,
     quiz_id     bigint       not null,
