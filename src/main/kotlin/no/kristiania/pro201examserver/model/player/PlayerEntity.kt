@@ -1,6 +1,7 @@
 package no.kristiania.pro201examserver.model.player
 
 import no.kristiania.pro201examserver.model.minigame.MinigameScoresEntity
+import no.kristiania.pro201examserver.model.quiz.PlayerAnswerEntity
 import javax.persistence.*
 
 @Entity
@@ -23,5 +24,9 @@ data class PlayerEntity(
 
     @OneToMany
     @JoinColumn(name = "player_id")
-    val minigameScores: List<MinigameScoresEntity>? = null
+    val minigameScores: List<MinigameScoresEntity>? = null,
+
+    @OneToMany
+    @JoinColumn(name = "player_id")
+    val quizAnswers: List<PlayerAnswerEntity>? = null
 )

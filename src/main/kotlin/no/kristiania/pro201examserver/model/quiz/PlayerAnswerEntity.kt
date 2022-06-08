@@ -25,5 +25,9 @@ data class PlayerAnswerEntity(
     val timeElapsed: Float? = null,
 
     @Column(name = "created")
-    val created: LocalDateTime? = LocalDateTime.now()
+    val created: LocalDateTime? = LocalDateTime.now(),
+
+    @OneToOne
+    @JoinColumn(name = "answer_id", insertable = false, updatable = false)
+    val answer: AnswersEntity? = null
 )

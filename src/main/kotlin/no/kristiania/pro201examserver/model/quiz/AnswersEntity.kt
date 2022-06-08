@@ -17,6 +17,10 @@ data class AnswersEntity(
     @Column(name = "answer_is_correct")
     val isCorrect: Boolean,
 
-    @Column(name = "answer_question_id")
-    val questionId: Int
+    @Column(name = "question_id")
+    val questionId: Int,
+
+    @OneToOne
+    @JoinColumn(name = "question_id", insertable = false, updatable = false)
+    val question: QuestionsEntity? = null
 )

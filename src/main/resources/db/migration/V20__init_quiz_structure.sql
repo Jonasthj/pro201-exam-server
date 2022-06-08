@@ -19,9 +19,9 @@ create table answers
     answer_id          bigserial primary key,
     answer_name        varchar(255) not null,
     answer_is_correct  boolean      not null,
-    answer_question_id bigint       not null,
+    question_id bigint       not null,
     constraint answer_question_id
-        foreign key (answer_question_id)
+        foreign key (question_id)
             references questions (question_id)
 );
 
