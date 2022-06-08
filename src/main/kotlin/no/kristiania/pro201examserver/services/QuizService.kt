@@ -13,15 +13,21 @@ class QuizService(
     @Autowired private val playerAnswerRepo: PlayerAnswerRepo
     ) {
 
-    fun savePlayerAnswer(answerInfo: AnswerInfo): PlayerAnswerEntity {
-        val playerAnswerEntity = PlayerAnswerEntity(
-            answerInfo.id,
-            answerInfo.playerId,
-            answerInfo.answerId,
-            answerInfo.isCorrect,
-            answerInfo.timeElapsed
-        )
-        return playerAnswerRepo.save(playerAnswerEntity)
+    fun savePlayerAnswer(answerInfo: AnswerInfo): PlayerAnswerEntity? {
+        if(answerInfo.playerId != null && answerInfo.answerId != null) {
+            val playerAnswer = playerAnswerRepo.getByPlayerIdAndAndAnswerId(answerInfo.playerId, answerInfo.answerId)
+
+            val playerAnswerEntity = PlayerAnswerEntity(
+                id = playerAnswer?.id,
+                playerId = answerInfo.playerId,
+                answerId = answerInfo.answerId,
+                isCorrect = answerInfo.isCorrect ?: playerAnswer?.isCorrect,
+                timeElapsed = answerInfo.timeElapsed ?: playerAnswer?.timeElapsed,
+            )
+            return playerAnswerRepo.save(playerAnswerEntity)
+        }
+
+        return null
     }
 
     fun getQuiz(quizId: Long): QuizEntity? {

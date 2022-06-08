@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository
 @Repository
 interface PlayerAnswerRepo : JpaRepository<PlayerAnswerEntity, Long> {
     fun findAllByPlayerId(playerId: Long) : List<PlayerAnswerEntity>?
+
+    fun getByPlayerIdAndAndAnswerId(playerId: Long, answerId: Long): PlayerAnswerEntity?
 }
