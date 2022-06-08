@@ -98,8 +98,8 @@ class PlayerControllerUnitTests {
         val playerId: Long = 1
         val id1: Long = 1
 
-        val answer1 = PlayerAnswerEntity(id1, playerId , 1, true, 30f, LocalDateTime.now())
-        val answer2 = PlayerAnswerEntity(2, 2, 2, false, 25f, LocalDateTime.now())
+        val answer1 = PlayerAnswerEntity(id1, playerId , 1, 1, true, 30f, LocalDateTime.now())
+        val answer2 = PlayerAnswerEntity(2, 2, 2, 1, false, 25f, LocalDateTime.now())
 
         every { playerService.getPlayerAnswersByPlayer(playerId) } answers {
             mutableListOf(answer1, answer2)

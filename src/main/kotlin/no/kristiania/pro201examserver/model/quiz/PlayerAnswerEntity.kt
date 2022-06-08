@@ -18,6 +18,9 @@ data class PlayerAnswerEntity(
     @Column(name = "answer_id")
     val answerId: Long? = null,
 
+    @Column(name = "question_id")
+    val questionid: Long? = null,
+
     @Column(name = "is_correct")
     val isCorrect: Boolean? = null,
 
@@ -28,6 +31,6 @@ data class PlayerAnswerEntity(
     val created: LocalDateTime? = LocalDateTime.now(),
 
     @OneToOne
-    @JoinColumn(name = "answer_id", insertable = false, updatable = false)
+    @JoinColumn(name = "question_id", insertable = false, updatable = false)
     val question: QuestionsEntity? = null
 )
