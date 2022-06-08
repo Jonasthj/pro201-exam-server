@@ -21,7 +21,7 @@ values (1, 'Hvor kan man finne andre hulveier?', 1),
        (9, 'Til øst for ruinen ligger det stokker under vann, hvorfor er disse her?', 3),
 
        (10, 'Hvilken funksjon har vann i en vannsag?', 4),
-       (11, 'Hva heter bekken / elven som er rett ved deg?', 4),
+       (11, 'Hva heter elven som er rett ved deg?', 4),
        (12, 'Hvilken tidsperiode er ruinene fra?', 4),
 
        (13, 'Hva er disse murveggene rester etter?', 5),
@@ -87,9 +87,9 @@ values (1, 'Hulveier er svært sjeldent, og det finnes kun to i Europa', false, 
        (39, 'Hestene kan drikke av vannet', false, 10),
        (40, 'Lett ankomst med båt', false, 10),
 
-       (41, 'Kurlandsbekken', false, 11),
-       (42, 'Gjellebekken', false, 11),
-       (43, 'Ramstadbekken', false, 11),
+       (41, 'Nitelva', false, 11),
+       (42, 'Leira', false, 11),
+       (43, 'Glomma', false, 11),
        (44, 'Byåa', true, 11),
 
        (45, 'Middelalderen', false, 12),
