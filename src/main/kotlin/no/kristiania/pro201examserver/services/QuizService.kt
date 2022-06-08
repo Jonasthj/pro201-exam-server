@@ -28,6 +28,10 @@ class QuizService(
         return quizRepo.findQuizEntityById(quizId)
     }
 
+    fun getAllQuizes(): List<QuizEntity> {
+        return quizRepo.findAll();
+    }
+
 }
 
 data class  AnswerInfo(

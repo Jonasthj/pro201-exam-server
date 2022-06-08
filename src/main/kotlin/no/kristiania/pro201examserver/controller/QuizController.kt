@@ -16,4 +16,10 @@ class QuizController(@Autowired private val quizService: QuizService) {
         return ResponseEntity.ok().body(quizService.getQuiz(quizId))
     }
 
+    @CrossOrigin
+    @GetMapping("/all")
+    fun getAllQuizzes() : ResponseEntity<List<QuizEntity>> {
+        return ResponseEntity.ok().body(quizService.getAllQuizes())
+    }
+
 }
