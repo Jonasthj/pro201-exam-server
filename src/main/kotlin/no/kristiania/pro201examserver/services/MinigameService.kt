@@ -29,7 +29,7 @@ class MinigameService(
         return minigameRoundsRepo.getById(roundId)
     }
 
-    fun getRoundsByMinigame(postId: Long): List<MinigameRoundsEntity>? {
+    fun getRoundsByPost(postId: Long): List<MinigameRoundsEntity>? {
         return minigameRoundsRepo.getAllByPostId(postId)
     }
 

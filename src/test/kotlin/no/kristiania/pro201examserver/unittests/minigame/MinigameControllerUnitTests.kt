@@ -120,7 +120,7 @@ class MinigameControllerUnitTests {
         val minigameRound1 = MinigameRoundsEntity(id = id1, roundNumber = roundNumber1, minigameId = 1, languageId = 1, postId = postId)
         val minigameRound2 = MinigameRoundsEntity(id = id2, roundNumber = roundNumber2, minigameId = 2, languageId = 2, postId = postId)
 
-        every { minigameService.getRoundsByMinigame(postId) } answers {
+        every { minigameService.getRoundsByPost(postId) } answers {
             mutableListOf(minigameRound1, minigameRound2)
         }
 

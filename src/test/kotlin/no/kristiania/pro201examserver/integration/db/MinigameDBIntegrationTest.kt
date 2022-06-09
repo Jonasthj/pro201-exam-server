@@ -50,7 +50,7 @@ class MinigameDBIntegrationTest(
     fun shouldGetRoundsByPostId() {
         val postId: Long = 1
 
-        val rounds = minigameService.getRoundsByMinigame(postId)
+        val rounds = minigameService.getRoundsByPost(postId)
 
         assert(rounds != null)
         assert(rounds?.size == 3)

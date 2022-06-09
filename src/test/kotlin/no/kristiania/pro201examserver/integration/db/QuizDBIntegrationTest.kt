@@ -24,7 +24,6 @@ class QuizDBIntegrationTest(@Autowired private val quizService: QuizService) {
         val saved = quizService.savePlayerAnswer(answerInfo)
 
         assert(saved != null)
-        assert(saved?.id == id)
         assert(saved?.timeElapsed == timeElapsed)
     }
 

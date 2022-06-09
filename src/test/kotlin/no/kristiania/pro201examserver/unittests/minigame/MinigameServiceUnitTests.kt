@@ -101,7 +101,7 @@ class MinigameServiceUnitTests {
             mutableListOf(minigameRound1, minigameRound2)
         }
 
-        val retrieved = minigameService.getRoundsByMinigame(postId)
+        val retrieved = minigameService.getRoundsByPost(postId)
 
         assert(retrieved != null)
         assert(retrieved?.size == 2)
