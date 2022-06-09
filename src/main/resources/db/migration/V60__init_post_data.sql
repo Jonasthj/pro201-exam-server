@@ -22,7 +22,11 @@ values (1, 'Hulveg', 267498,
         'sagruin_uri', 1, 1),
 
        (2, 'Kvernhus', 267603,
-        'Fra Vesledammen går Byåa ned i en bratt skråning, men der terrenget flater seg litt mer ut, er det spor av et kvernhus. Denne ligger vest for grusvei/skogsvei. Langs sidene på Byåa er det murt opp stein på begge sider, på sørsiden er den 1,4 meter lang, mer utydelig på nordsiden, men det ligger en stor steinblokk på 50 x 50 cm på kanten. Det er også stein på kantene som ser ut som fundament til en liten bygning, mest på sørsiden. Det ser ut som selve bygningen kan ha ligget på sørsiden, det er i vest en steinvoll på 40 cm høyde, lengde 110 cm og bredde 80 cm. Det går på skrå ut fra steinvollen en lav steinstreng på 2 meter og bredde 80 cm. I øst er steinansamlingen 40 cm høy, 2-3 meter bred og 4 meter lang. Steinansamlingene viser ikke tydelig omfanget av, eller hvordan kvernhuset kan ha sett ut, men sannsynlig kan selve vannhjulet ligget i selve Byåa. Det ligger en liten demning rett vest for kvernhuset/mølla, men er av nyere dato eller eventuelt restaurert da den er lagd av godt bevart planker. Området rundt er en liten flate med bratte skråninger i sør.
+        'Fra Vesledammen går Byåa ned i en bratt skråning, men der terrenget flater seg litt mer ut, er det spor av et kvernhus. Denne ligger vest for grusvei/skogsvei.\n
+Langs sidene på Byåa er det murt opp stein på begge sider, på sørsiden er den 1,4 meter lang, mer utydelig på nordsiden, men det ligger en stor steinblokk på 50 x 50 cm på kanten. Det er også stein på kantene som ser ut som fundament til en liten bygning, mest på sørsiden.\n
+Det ser ut som selve bygningen kan ha ligget på sørsiden, det er i vest en steinvoll på 40 cm høyde, lengde 110 cm og bredde 80 cm. Det går på skrå ut fra steinvollen en lav steinstreng på 2 meter og bredde 80 cm. \n
+I øst er steinansamlingen 40 cm høy, 2-3 meter bred og 4 meter lang. Steinansamlingene viser ikke tydelig omfanget av, eller hvordan kvernhuset kan ha sett ut, men sannsynlig kan selve vannhjulet ligget i selve Byåa. \n
+Det ligger en liten demning rett vest for kvernhuset/mølla, men er av nyere dato eller eventuelt restaurert da den er lagd av godt bevart planker. Området rundt er en liten flate med bratte skråninger i sør.\n
 Historiske kart fra 1800-taller viser at det har ligget flere kvernhus/møller i området og de er også nevnt i skriftlige kilder. Det er tatt vare på flere kvernsteiner/møllesteiner som ligger i private hager i nærområdet.',
         'vannmølle_uri', 2, 2),
 

@@ -7,10 +7,7 @@ import no.kristiania.pro201examserver.model.player.SessionEntity
 import no.kristiania.pro201examserver.model.quiz.PlayerAnswerEntity
 import no.kristiania.pro201examserver.repo.player.PlayerRepo
 import no.kristiania.pro201examserver.repo.quiz.PlayerAnswerRepo
-import no.kristiania.pro201examserver.services.MinigameService
-import no.kristiania.pro201examserver.services.PlayerInfo
-import no.kristiania.pro201examserver.services.PlayerService
-import no.kristiania.pro201examserver.services.SessionService
+import no.kristiania.pro201examserver.services.*
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Test
 import java.time.LocalDateTime
@@ -21,7 +18,8 @@ class PlayerServiceUnitTests {
     private val sessionService = mockk<SessionService>()
     private val minigameService = mockk<MinigameService>()
     private val playerAnswerRepo = mockk<PlayerAnswerRepo>()
-    private val playerService = PlayerService(playerRepo, sessionService, minigameService, playerAnswerRepo)
+    private val quizService = mockk<QuizService>()
+    private val playerService = PlayerService(playerRepo, sessionService, minigameService, playerAnswerRepo, quizService)
 
     @Test
     fun shouldGetPlayersBySession() {

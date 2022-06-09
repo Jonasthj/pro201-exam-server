@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service
 @Service
 class QuizService(
     @Autowired private val quizRepo: QuizRepo,
-    @Autowired private val playerAnswerRepo: PlayerAnswerRepo
+    @Autowired private val playerAnswerRepo: PlayerAnswerRepo,
     ) {
 
     fun savePlayerAnswer(answerInfo: AnswerInfo): PlayerAnswerEntity? {
@@ -37,6 +37,10 @@ class QuizService(
 
     fun getAllQuizes(): List<QuizEntity> {
         return quizRepo.findAll()
+    }
+
+    fun deleteAnswers(id: Long?) {
+        quizRepo.deleteAllById(id)
     }
 
 }

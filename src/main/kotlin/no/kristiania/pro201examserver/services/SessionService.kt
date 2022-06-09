@@ -7,13 +7,11 @@ import org.springframework.stereotype.Service
 
 @Service
 class SessionService(
-    @Autowired private val sessionRepo: SessionRepo
+    @Autowired private val sessionRepo: SessionRepo,
 ) {
 
-    fun clearSession(sessionId: String): Boolean {
+    fun clearSession(sessionId: String) {
         sessionRepo.deleteById(sessionId)
-
-        return true
     }
 
     fun saveSession(session: SessionEntity) : SessionEntity {

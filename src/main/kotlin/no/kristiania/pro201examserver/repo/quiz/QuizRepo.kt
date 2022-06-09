@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository
 @Repository
 interface QuizRepo : JpaRepository<QuizEntity, Long> {
     fun findQuizEntityById(quizId: Long): QuizEntity?
+    fun deleteAllById(id: Long?)
 }

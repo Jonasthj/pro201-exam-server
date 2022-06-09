@@ -21,16 +21,9 @@ class PlayerController(
 
     @CrossOrigin
     @DeleteMapping("/delete/session")
-    fun clearSession(@RequestParam sessionId: String): ResponseEntity<String> {
-
-        val playerResponse = playerService.deletePlayers(sessionId)
-        val sessionResponse = sessionService.clearSession(sessionId)
-
-        if(sessionResponse && playerResponse) {
-            return ResponseEntity.ok().body("Session cleared")
-        }
-
-        return ResponseEntity.badRequest().build()
+    fun clearSession(@RequestParam sessionId: String) {
+        playerService.deletePlayers(sessionId)
+        sessionService.clearSession(sessionId)
     }
 
     @CrossOrigin

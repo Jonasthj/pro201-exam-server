@@ -13,7 +13,8 @@ class PlayerService(
     @Autowired private val playerRepo: PlayerRepo,
     @Autowired private val sessionService: SessionService,
     @Autowired private val minigameScoresService: MinigameService,
-    @Autowired private val playerAnswerRepo: PlayerAnswerRepo
+    @Autowired private val playerAnswerRepo: PlayerAnswerRepo,
+    @Autowired private val quizService: QuizService
 ) {
 
     fun findAllPlayers(sessionId: String): List<PlayerEntity>? {
@@ -45,6 +46,7 @@ class PlayerService(
         if (players != null && players.isNotEmpty()) {
             players.forEach { player ->
                 minigameScoresService.deleteScores(player.id)
+                quizService.deleteAnswers(player.id)
                 deleteById(player.id)
             }
             return true

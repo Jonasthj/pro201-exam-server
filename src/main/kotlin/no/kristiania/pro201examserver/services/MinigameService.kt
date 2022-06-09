@@ -14,7 +14,7 @@ import java.time.LocalDateTime
 class MinigameService(
     @Autowired private val minigameRepo: MinigameRepo,
     @Autowired private val minigamesScoresRepo: MinigameScoresRepo,
-    @Autowired private val minigameRoundsRepo: MinigameRoundsRepo
+    @Autowired private val minigameRoundsRepo: MinigameRoundsRepo,
     ) {
 
     fun getMinigames(): List<MinigameEntity>? {
@@ -55,6 +55,10 @@ class MinigameService(
         id?.let {
             println(it)
             minigamesScoresRepo.deleteAllByPlayerId(it) }
+    }
+
+    fun deleteScoresBySession(sessionId: String) {
+
     }
 
 }
