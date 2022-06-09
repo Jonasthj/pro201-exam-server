@@ -33,13 +33,6 @@ values (1, 1, 1, 1, 1),
        (20, 2, 1, 1, 7),
        (21, 3, 1, 1, 7);
 
-insert into minigame_scores
-values (nextval('minigame_scores_score_id_seq'), 2, 34.2, now(), 1, 1),
-       (nextval('minigame_scores_score_id_seq'), 2, 15, now(), 2, 1),
-       (nextval('minigame_scores_score_id_seq'), 1, 45, now(), 3, 1),
-       (nextval('minigame_scores_score_id_seq'), 6, 10, now(), 2, 1),
-       (nextval('minigame_scores_score_id_seq'), 10, 50.3, now(), 2, 1);
-
 insert into memorycards
 values (nextval('memorycards_memory_id_seq'), 'MiniGameSprites/Memory/image_01', 1),
        (nextval('memorycards_memory_id_seq'), 'MiniGameSprites/Memory/image_02', 1),
