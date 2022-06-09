@@ -2,18 +2,13 @@ package no.kristiania.pro201examserver.unittests.quiz
 
 import io.mockk.every
 import io.mockk.mockk
-import no.kristiania.pro201examserver.model.post.PostsEntity
-import no.kristiania.pro201examserver.model.post.PostsInfoEntity
 import no.kristiania.pro201examserver.model.quiz.PlayerAnswerEntity
 import no.kristiania.pro201examserver.model.quiz.QuizEntity
 import no.kristiania.pro201examserver.repo.player.PlayerRepo
-import no.kristiania.pro201examserver.repo.post.PostInfoRepo
-import no.kristiania.pro201examserver.repo.post.PostRepo
 import no.kristiania.pro201examserver.repo.quiz.PlayerAnswerRepo
 import no.kristiania.pro201examserver.repo.quiz.QuizRepo
 import no.kristiania.pro201examserver.services.*
 import org.junit.jupiter.api.Test
-import java.time.LocalDateTime
 
 class QuizServiceUnitTests {
 
@@ -22,7 +17,6 @@ class QuizServiceUnitTests {
     private val sessionService = mockk<SessionService>()
     private val minigameService = mockk<MinigameService>()
     private val playerAnswerRepo = mockk<PlayerAnswerRepo>()
-    private val playerService = PlayerService(playerRepo, sessionService, minigameService, playerAnswerRepo)
     private val quizService = QuizService(quizRepo, playerAnswerRepo)
 
     @Test

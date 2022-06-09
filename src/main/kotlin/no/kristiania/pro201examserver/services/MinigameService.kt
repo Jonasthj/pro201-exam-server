@@ -17,6 +17,22 @@ class MinigameService(
     @Autowired private val minigameRoundsRepo: MinigameRoundsRepo
     ) {
 
+    fun getMinigames(): List<MinigameEntity>? {
+        return minigameRepo.findAll()
+    }
+
+    fun getMinigameRounds(): List<MinigameRoundsEntity>? {
+        return minigameRoundsRepo.findAll()
+    }
+
+    fun getMinigameRound(roundId: Long): MinigameRoundsEntity? {
+        return minigameRoundsRepo.getById(roundId)
+    }
+
+    fun getRoundsByMinigame(postId: Long): List<MinigameRoundsEntity>? {
+        return minigameRoundsRepo.getAllByPostId(postId)
+    }
+
     fun saveScore(scoresInfo: ScoresInfo): MinigameScoresEntity? {
 
         if(scoresInfo.playerId != null && scoresInfo.roundId != null) {
@@ -39,22 +55,6 @@ class MinigameService(
         id?.let {
             println(it)
             minigamesScoresRepo.deleteAllByPlayerId(it) }
-    }
-
-    fun getMinigames(): List<MinigameEntity>? {
-        return minigameRepo.findAll()
-    }
-
-    fun getMinigameRounds(): List<MinigameRoundsEntity>? {
-        return minigameRoundsRepo.findAll()
-    }
-
-    fun getMinigameRound(roundId: Long): MinigameRoundsEntity? {
-        return minigameRoundsRepo.getById(roundId);
-    }
-
-    fun getRoundsByMinigame(postId: Long): List<MinigameRoundsEntity>? {
-        return minigameRoundsRepo.getAllByPostId(postId)
     }
 
 }

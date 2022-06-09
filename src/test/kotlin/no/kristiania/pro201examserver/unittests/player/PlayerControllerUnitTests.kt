@@ -50,6 +50,9 @@ class PlayerControllerUnitTests {
     @Autowired
     private lateinit var sessionService: SessionService
 
+    @Autowired
+    private lateinit var quizService: QuizService
+
     @Test
     fun shouldGetAllPlayers() {
         val sessionId = "123"
@@ -126,5 +129,35 @@ class PlayerControllerUnitTests {
         mockMvc.delete("/api/delete/session?sessionId=${sessionId}")
             .andExpect { status { isOk() } }
             .andReturn()
+    }
+
+    @Test
+    fun shouldSavePlayerAnswer(){
+        val id: Long = 1
+        val playerId: Long = 123
+        val answerId: Long = 1
+        val questionId: Long = 1
+        val isCorrect = true
+        val timeElapsed = null
+
+        val answerInfo = AnswerInfo(id, playerId, answerId, questionId, isCorrect, timeElapsed)
+
+        // Need to have mock answer for test to run, answer is not necessary
+        every { quizService.savePlayerAnswer(answerInfo) } answers {
+            nothing
+        }
+
+        mockMvc.post("/api/save/player/answer"){
+            contentType = MediaType.APPLICATION_JSON
+            content = "{\n" +
+                    "    \"id\": ${id},\n" +
+                    "    \"playerId\": ${playerId},\n" +
+                    "    \"answerId\": ${answerId},\n" +
+                    "    \"questionId\": ${questionId},\n" +
+                    "    \"isCorrect\": ${isCorrect},\n" +
+                    "    \"timeElapsed\": ${timeElapsed}\n" +
+                    "}"
+        }
+            .andExpect { status { is2xxSuccessful() } }
     }
 }
