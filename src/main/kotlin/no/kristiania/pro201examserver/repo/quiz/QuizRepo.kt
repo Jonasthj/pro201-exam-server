@@ -9,7 +9,4 @@ import javax.transaction.Transactional
 interface QuizRepo : JpaRepository<QuizEntity, Long> {
 
     fun findQuizEntityById(quizId: Long): QuizEntity?
-
-    @Transactional
-    fun deleteAllById(id: Long?)
 }

@@ -40,7 +40,7 @@ class QuizService(
     }
 
     fun deleteAnswers(id: Long?) {
-        quizRepo.deleteAllById(id)
+        playerAnswerRepo.deleteAllByPlayerId(id)
     }
 
 }

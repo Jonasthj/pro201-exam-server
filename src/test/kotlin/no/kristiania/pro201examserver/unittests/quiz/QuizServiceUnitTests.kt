@@ -5,6 +5,7 @@ import io.mockk.mockk
 import no.kristiania.pro201examserver.model.quiz.PlayerAnswerEntity
 import no.kristiania.pro201examserver.model.quiz.QuizEntity
 import no.kristiania.pro201examserver.repo.player.PlayerRepo
+import no.kristiania.pro201examserver.repo.quiz.AnswersRepo
 import no.kristiania.pro201examserver.repo.quiz.PlayerAnswerRepo
 import no.kristiania.pro201examserver.repo.quiz.QuizRepo
 import no.kristiania.pro201examserver.services.*
@@ -13,9 +14,6 @@ import org.junit.jupiter.api.Test
 class QuizServiceUnitTests {
 
     private val quizRepo = mockk<QuizRepo>()
-    private val playerRepo = mockk<PlayerRepo>()
-    private val sessionService = mockk<SessionService>()
-    private val minigameService = mockk<MinigameService>()
     private val playerAnswerRepo = mockk<PlayerAnswerRepo>()
     private val quizService = QuizService(quizRepo, playerAnswerRepo)
 
